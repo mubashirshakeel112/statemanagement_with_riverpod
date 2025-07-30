@@ -10,7 +10,6 @@ class RouteGenerator {
         return error();
     }
   }
-
   static Route<dynamic> error() {
     return MaterialPageRoute(
       builder: (_) {

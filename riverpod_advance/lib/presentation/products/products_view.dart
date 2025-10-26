@@ -2,6 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_advance/presentation/products/notifier/products_notifier.dart';
+import 'package:riverpod_advance/presentation/products_detail/products_detail_view.dart';
+import 'package:riverpod_advance/presentation/widgets/custom_shimmer.dart';
 import 'package:shimmer/shimmer.dart';
 
 class ProductsView extends ConsumerStatefulWidget {
@@ -60,7 +62,9 @@ class _ProductsViewState extends ConsumerState<ProductsView> {
                     itemBuilder: (context, index) {
                       final product = productsState.productsModel.products?[index];
                       return GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(context, ProductsDetailView.id, arguments: product?.id);
+                        },
                         child: Container(
                           color: Colors.white,
                           child: Stack(
@@ -73,18 +77,7 @@ class _ProductsViewState extends ConsumerState<ProductsView> {
                                     if ((product?.images?.isNotEmpty ?? false))
                                       CachedNetworkImage(
                                         imageUrl: product!.images![0],
-                                        placeholder: (context, url) => Shimmer.fromColors(
-                                          baseColor: Colors.grey[300]!, // Base color of the shimmer
-                                          highlightColor: Colors.grey[100]!, // Highlight color of the shimmer
-                                          child: Container(
-                                            width: 200.0,
-                                            height: 20.0,
-                                            decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.circular(12),
-                                            ),
-                                          ),
-                                        ),
+                                        placeholder: (context, url) => CustomShimmer(width: 84, height: 84, radius: 12),
                                         errorWidget: (context, url, error) => Icon(Icons.photo),
                                         width: 84,
                                         height: 84,
@@ -162,6 +155,7 @@ class _ProductsViewState extends ConsumerState<ProductsView> {
                     },
                   ),
           ),
+          SizedBox(height: 90),
         ],
       ),
     );

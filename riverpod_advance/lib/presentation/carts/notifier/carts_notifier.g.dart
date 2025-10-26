@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'products_notifier.dart';
+part of 'carts_notifier.dart';
 
 // **************************************************************************
 // RiverpodGenerator
@@ -9,52 +9,52 @@ part of 'products_notifier.dart';
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint, type=warning
 
-@ProviderFor(ProductsNotifier)
-const productsProvider = ProductsNotifierProvider._();
+@ProviderFor(CartsNotifier)
+const cartsProvider = CartsNotifierProvider._();
 
-final class ProductsNotifierProvider
-    extends $NotifierProvider<ProductsNotifier, ProductsState> {
-  const ProductsNotifierProvider._()
+final class CartsNotifierProvider
+    extends $NotifierProvider<CartsNotifier, CartsState> {
+  const CartsNotifierProvider._()
     : super(
         from: null,
         argument: null,
         retry: null,
-        name: r'productsProvider',
+        name: r'cartsProvider',
         isAutoDispose: true,
         dependencies: null,
         $allTransitiveDependencies: null,
       );
 
   @override
-  String debugGetCreateSourceHash() => _$productsNotifierHash();
+  String debugGetCreateSourceHash() => _$cartsNotifierHash();
 
   @$internal
   @override
-  ProductsNotifier create() => ProductsNotifier();
+  CartsNotifier create() => CartsNotifier();
 
   /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(ProductsState value) {
+  Override overrideWithValue(CartsState value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride: $SyncValueProvider<ProductsState>(value),
+      providerOverride: $SyncValueProvider<CartsState>(value),
     );
   }
 }
 
-String _$productsNotifierHash() => r'cfbd9348f73f4f2537ed024a8369d71345c997f0';
+String _$cartsNotifierHash() => r'a9a7d021f8c9056fdf479844d9bfba04dd29c687';
 
-abstract class _$ProductsNotifier extends $Notifier<ProductsState> {
-  ProductsState build();
+abstract class _$CartsNotifier extends $Notifier<CartsState> {
+  CartsState build();
   @$mustCallSuper
   @override
   void runBuild() {
     final created = build();
-    final ref = this.ref as $Ref<ProductsState, ProductsState>;
+    final ref = this.ref as $Ref<CartsState, CartsState>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<ProductsState, ProductsState>,
-              ProductsState,
+              AnyNotifier<CartsState, CartsState>,
+              CartsState,
               Object?,
               Object?
             >;

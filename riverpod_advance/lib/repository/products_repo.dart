@@ -8,4 +8,9 @@ class ProductsRepository extends ProductsService {
   Future<ProductsModel> getProducts() async {
     return await _wcProductsService.getProducts();
   }
+
+  @override
+  Future<Product> getProductsById(int id) async{
+    return await _wcProductsService.getProductsById(id);
+  }
 }

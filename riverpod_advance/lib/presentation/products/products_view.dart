@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_advance/presentation/products/notifier/products_notifier.dart';
 import 'package:riverpod_advance/presentation/products_detail/products_detail_view.dart';
-import 'package:riverpod_advance/presentation/widgets/custom_shimmer.dart';
-import 'package:shimmer/shimmer.dart';
+import 'package:riverpod_advance/widgets/custom_shimmer.dart';
 
 class ProductsView extends ConsumerStatefulWidget {
   static const String id = '/products_view';

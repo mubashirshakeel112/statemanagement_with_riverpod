@@ -2,7 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_advance/presentation/products_detail/notifier/products_detail_notifier.dart';
-import 'package:riverpod_advance/presentation/widgets/custom_shimmer.dart';
+import 'package:riverpod_advance/widgets/custom_shimmer.dart';
 
 class ProductsDetailView extends ConsumerStatefulWidget {
   static const String id = '/products_detail_view';
